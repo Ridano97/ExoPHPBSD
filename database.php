@@ -11,26 +11,28 @@ class Database {
     public static function connect() {
         if (self::$connexion == null) {
             try {
-                self::$connexion = new PDO ("mysql:host" . self::$dbHost . ";dbname=" . self::$dbName , self::$dbUserName , self::$dbUserPassword);
+                self::$connexion = new PDO("mysql:host=" . self::$dbHost . ";dbname=" . self::$dbName , self::$dbUserName , self::$dbUserPassword);
             }
             catch (PDOException $toto) {
                 die ($toto->getMessage());
             }
         }
-        return self::$connexion
+        return self::$connexion;
     }
 
-    public static function getPokemon() {
+    public static function getPokemon(){
         $db = Database::connect();
-                            /*éxécuter*/
-        $executerRequeteSQL = $db->query("SELECT num_poke, nom, taille FROM pokemon 
+
+        $executerRequeteSQL = $db->query("SELECT * FROM pokemon 
         WHERE num_poke = 1;");
 
-        $recupererRequetePokemon = $excuterRequeteSQL;
+        $recupererPokemon = $executerRequeteSQL;
 
-        return $recupererRequetePokemon;
+        return $recupererPokemon;
+    }    
 
-    }
+    
+    
 
 }
 
