@@ -9,9 +9,10 @@
     <title>Pokédex</title>
 </head>
 <body>
+    
     <?php
 
-    echo "<h1>hello</h1>";
+    echo "<h1>POKEMON</h1>";
 
     ?>
 
