@@ -14,56 +14,51 @@
     <div>
         <h1><img id="image_logo" src="./images/poke.webp" alt="pokemon"></h1>
     </div>
+    <div>
 
-    <table>
-        <thead>
-            <th>IMAGE</th>
-            <th>Nom</th>
-            <th>Taille</th>
-            <th>Description</th>
-            <th>HP</th>
-            <th>Attaque</th>
-            <th>Défense</th>
-            <th>Vitesse</th>
-            <th>Attaque spé</th>
-            <th>Défense spé</th>
-            <th>Génération</th>
-            <th>Version</th>
-            <th>Habitat</th>
-            <th>Compétence</th>
-            <th>Catégorie</th>
-        </thead>
-            <tbody>
-                <?php
+    </div>
+    <div id="card-poke">
+        <table>
+            <thead>
+                <th><img id="pokedex" src="./images/dex.png" alt="pokedex"> <p>POKEMON</p> <img id="pokeball" src="./images/poke.png" alt="pokeball-image"></th>
+            </thead>
+                <tbody>
+                    <?php
+                    require 'database.php';
+                                    //stockage de database et de la fonction                         
+                    $appelDeLaFonctionGetPokemon = Database::getPokemon();
 
-                require 'database.php';
-                                //stockage de database et de la fonction                         
-                $appelDeLaFonctionGetPokemon = Database::getPokemon();
+                    while($pokemon = $appelDeLaFonctionGetPokemon->fetch()){
+                        
+                        echo "<tr>";
+                        echo '<td><img id="poke" src="images/' . $pokemon['img_poke'] . '"></td>';
+                        echo "<td>".$pokemon["nom"]."</td>";
+                        echo "</tr>"; 
+                        /* echo "<td>".$pokemon["taille"]."</td>"; */
+                      /*   echo "<td>".$pokemon["hp"]."</td>";
+                        echo "<td>".$pokemon["description"]."</td>";
+                        echo "<td>".$pokemon["attack"]."</td>";
+                        echo "<td>".$pokemon["defence"]."</td>";
+                        echo "<td>".$pokemon["speed"]."</td>";
+                        echo "<td>".$pokemon["attack_spe"]."</td>";
+                        echo "<td>".$pokemon["defence_spe"]."</td>";
+                        echo "<td>".$pokemon["generation"]."</td>";
+                        echo "<td>".$pokemon["version_app"]."</td>";
+                        echo "<td>".$pokemon["habitat"]."</td>";
+                        echo "<td>".$pokemon["competence"]."</td>";
+                        echo "<td>".$pokemon["categorie"]."</td>";  */
 
-                while($pokemon = $appelDeLaFonctionGetPokemon->fetch()){
-                    
-                
-                    echo "<td>".$pokemon["img_poke"]."</td>";
-                    echo "<td>".$pokemon["nom"]."</td>";
-                    echo "<td>".$pokemon["taille"]."</td>";
-                    echo "<td>".$pokemon["description"]."</td>";
-                    echo "<td>".$pokemon["hp"]."</td>";
-                    echo "<td>".$pokemon["attack"]."</td>";
-                    echo "<td>".$pokemon["defence"]."</td>";
-                    echo "<td>".$pokemon["speed"]."</td>";
-                    echo "<td>".$pokemon["attack_spe"]."</td>";
-                    echo "<td>".$pokemon["defence_spe"]."</td>";
-                    echo "<td>".$pokemon["generation"]."</td>";
-                    echo "<td>".$pokemon["version_app"]."</td>";
-                    echo "<td>".$pokemon["habitat"]."</td>";
-                    echo "<td>".$pokemon["competence"]."</td>";
-                    echo "<td>".$pokemon["categorie"]."</td>";
-
-                }
-
-                
-                ?>
-            </tbody>
-    </table>
+                    }
+                    ?>
+                </tbody>
+        </table>
+    </div>
+    <footer>
+        <ul>
+            <li>POKEMON</li>
+            <li>POKéDEX</li>
+            <li>RIDA©</li>
+        </ul>
+    </footer>
 </body>
 </html>

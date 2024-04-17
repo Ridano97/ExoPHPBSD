@@ -1,13 +1,70 @@
-th {
-    border: 2px black solid;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-td {
+
+th {
     border: 2px black solid;
+    background-color: #EF4035;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 table {
     border: 2px black solid;
+    
+   
+}
+
+#pokedex {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    margin-right: 500px;
+}
+
+#pokeball {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    position: absolute;
+    margin-left: 500px;
+}
+
+#card-poke {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#poke {
+    background-color: white;
+    border: 2px black solid; 
+    margin: 10px ;
+}
+
+#poke:hover {
+    background-color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 3px white solid;
+}
+
+td {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #EF4035;
+    color: white;
+    border: 2px white solid;
 }
 
 h1 {
@@ -17,6 +74,23 @@ h1 {
 }
 
 #image_logo {
-    height: 500px;
-    width: 700px;
+    height: 450px;
+    width: 600px;
+}
+
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer {
+    margin-top: 100px;
+    width: 100%;
+    background-color:#EF4035;
+    padding: 5px;
+    color: white;
+    font-weight: bolder;
 }

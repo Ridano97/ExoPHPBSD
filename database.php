@@ -23,16 +23,19 @@ class Database {
     public static function getPokemon(){
         $db = Database::connect();
 
-        $executerRequeteSQL = $db->query("SELECT * FROM pokemon 
-        WHERE num_poke = 1;");
+        $executerRequeteSQL = $db->query("SELECT * FROM pokemon;");
 
         $recupererPokemon = $executerRequeteSQL;
 
         return $recupererPokemon;
     }    
 
-    
-    
+   /*  public static function getOnePokemon(){
+        $db = Database::connect();
+
+        $executerRequeteSQL = $db->query("SELECT * FROM pokemon;")
+    }
+     */
 
 }
 
