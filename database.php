@@ -45,6 +45,34 @@ class Database {
     } 
      
 
+    public static function addPokemon() {
+        $db = Database::connect();
+        $sql = "INSERT INTO pokemon (nom, taille, description, masse, hp, attack, defence, speed, attack_spe, defence_spe, img_poke, generation, version_app, habitat, competence, categorie)
+        VALUES (:nom, :taille, :description, :masse, :hp, :attack, :defence, :speed, :attack_spe, :defence_spe, :img_poke, :generation, :version_app, :habitat, :competence, :categorie)";
+        $ajouterPokemon = $db->prepare($sql);
+        $ajouterPokemon->execute(array(
+            "nom" =>  $nom,
+            "taille" => $taille,
+            "description" => $description,
+            "masse" => $masse,
+            "hp" => $hp,
+            "attack" => $attack,
+            "defence" => $defence,
+            "speed" => $speed, 
+            "attack_spe" => $attack_spe,
+            "defence_spe" => $defence_spe,
+            "img_poke" => $img_poke,
+            "generation" => $generation,
+            "version_app" => $version_app,
+            "habitat" => $habitat,
+            "competence" => $competence,
+            "categorie" => $categorie
+        ));
+
+        echo "POKÉMON AJOUTÉ AU POKÉDEX AVEC SUCCÈS." ;
+    }
+
+
 }
 
 

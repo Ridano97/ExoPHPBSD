@@ -4,7 +4,30 @@ session_start();
 
 
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $nom = $_POST['nom'];
+    $taille = $_POST ['taille'];
+    $description = $_POST ['description'];
+    $masse = $_POST ['masse'];
+    $hp = $_POST ['hp'];
+    $attack = $_POST ['attack'];
+    $defence = $_POST ['defence'];
+    $speed = $_POST ['speed'];
+    $attack_spe = $_POST ['attack_spe'];
+    $defence_spe = $_POST ['defence_spe'];
+    $img_poke = $_POST ['img_poke'];
+    $generation = $_POST ['generation'];
+    $version_app = $_POST ['version_app'];
+    $habitat = $_POST ['habitat'];
+    $competence = $_POST ['competence'];
+    $categorie = $_POST ['categorie'];
 
+require 'database.php';
+
+$appelDeLaFonctionAddPokemon = Database::addPokemon();
+
+}
 ?>
 
 
