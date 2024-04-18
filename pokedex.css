@@ -1,9 +1,22 @@
+@font-face {
+    font-family: rowdies ;
+    src: url(./font/Rowdies-Bold.ttf);
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: rowdies ;
 }
 
+body {
+    background-image: url(./images/arrière-plan.avif);
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+}
 
 th {
     border: 2px black solid;
@@ -50,7 +63,7 @@ table {
 }
 
 #poke:hover {
-    background-color: black;
+    background-color: #FFCC02;
     cursor: pointer;
     border-radius: 5px;
     border: 3px white solid;
@@ -74,8 +87,11 @@ h1 {
 }
 
 #image_logo {
-    height: 450px;
+    height: 250px;
     width: 600px;
+    background-color: #2D9BD2;
+    margin-bottom: 80px;
+    margin-top: 20px;
 }
 
 
@@ -84,6 +100,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    
 }
 
 footer {
@@ -94,3 +111,57 @@ footer {
     color: white;
     font-weight: bolder;
 }
+
+#sacha {
+    margin-left: 40px;
+    margin-top: 400px;
+    position: absolute;
+
+}
+
+#chen { 
+    position: absolute;
+    margin-left: 1100px;
+    margin-top: 400px;
+    height: 800px;
+
+    
+}
+
+ol { 
+
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+    font-size: 25px;
+    color: white;
+    text-shadow: black 2px 2px, 2px 2px, 2px 2px, 2px 2px;
+
+}
+
+#detailstitre {
+    color:#FFCC02;
+    text-shadow: 3px 0 #3164AE, 2px 0 #3164AE, 0 3px #3164AE, 0 2px #3164AE,
+    2px 2px, 2px 2px, 2px 2px, 2px 2px;
+}
+
+#pierre {
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 200px;
+}
+
+#lili {
+    margin-left: 1200px;
+    margin-top: 200px;
+    position: absolute;
+}
+
+#entete {
+
+    margin-top: 60px;
+
+}
+

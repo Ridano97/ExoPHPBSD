@@ -30,12 +30,16 @@ class Database {
         return $recupererPokemon;
     }    
 
-   /*  public static function getOnePokemon(){
+    public static function getPokemonById($infosPokemon){
         $db = Database::connect();
+        $sql = "SELECT * FROM pokemon WHERE num_poke = :id";
 
-        $executerRequeteSQL = $db->query("SELECT * FROM pokemon;")
-    }
-     */
+        $recupererPokemonByID = $db->prepare($sql);
+        $recupererPokemonByID->execute(array('id'=>$infosPokemon));
+
+        return $recupererPokemonByID;
+    } 
+     
 
 }
 
