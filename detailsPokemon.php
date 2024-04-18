@@ -31,7 +31,7 @@
     <div id="entete">
         <img id="pierre" src="./images/pierre.png" alt="photo_pierre">
         <img id="lili" src="./images/lili.png" alt="lili-photo">
-        <h1 id="detailstitre">DÉTAILS POKÉMON</h1>
+        <h1 class="detailstitre"><a href="pokedex.php" target="_self"><img id="logo-back" src="./images/backlogo.png" alt="logo-retour"></a> DÉTAILS POKÉMON</h1>
     </div>
     <div>
             <?php
@@ -54,9 +54,15 @@
                         echo "<li>Défense spéciale : ".$pokemon["defence_spe"]."</li>";
                         echo "<li>Génération : ".$pokemon["generation"]."</li>";
                         echo "<li>Version : ".$pokemon["version_app"]."</li>";
-                        echo "<li>Zone : ".$pokemon["habitat"]."</li>";
+                        echo "<li>Habitat : ".$pokemon["descriptionHabitat"]."</li>";
+                        echo "<li>         ".$pokemon["nomHabitat"]."</li>";
                         echo "<li>Compétence : ".$pokemon["competence"]."</li>";
+                        echo "<li>            ".$pokemon["nomCompetence"]."</li>";
+                        echo "<li>            ".$pokemon["descriptionComp"]."</li>";
                         echo "<li>Catégorie : ".$pokemon["categorie"]."</li>";
+                        echo "<li>           ".$pokemon["nomCategorie"]."</li>";
+                        echo "<li>          ".$pokemon["descriptionCat"]."</li>";
+
                         echo "</ol>";
                     }
                     ?>

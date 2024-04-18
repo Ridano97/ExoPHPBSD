@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="pokedex.css">
 </head>
 <body>
+    <a href="ajoutPokemon.php" target="_self" id="text-ajout">Explore le monde et ajoute des Pokémons à ton Pokédex ici !</p></a>
     <img id="sacha" src="./images/sacha.webp" alt="sacha-photo">
     <img id="chen" src="./images/chen.png" alt="chenphoto">
     <div>
