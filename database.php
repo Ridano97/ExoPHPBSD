@@ -71,7 +71,21 @@ class Database {
 
         echo "POKÉMON AJOUTÉ AU POKÉDEX AVEC SUCCÈS." ;
     }
+    public static function addUtilisateur($nom, $mail, $mdp, $date_naissance){
+        $db=Database::connect();
+        $sql="INSERT INTO utilisateur ('nom, mail, mdp, date_naissance')
+        VALUE (:nom, :mail, :mdp, :date_naissance)";
+        $ajouterUtilisateur = $db->prepare($sql);
+        $ajouterUtilisateur->execute(array(
+            "nom" => $nom,
+            "mail" => $mail,
+            "mdp" => $mdp,
+            "date_naissance" => $date_naissance
+        ));
 
+        
+
+    }
 
 }
 

@@ -338,3 +338,13 @@ label {
     margin-left: 550px;
     margin-top: 240px;
 }
+
+#dialoguepikachu {
+    position: absolute;
+    background-color: white;
+    border: 4px black solid;
+    padding: 10px;
+    border-radius: 10px; ;
+    margin-left: 900px;
+    margin-top: 350px;
+}
