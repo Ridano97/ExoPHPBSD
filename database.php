@@ -45,13 +45,13 @@ class Database {
     } 
      
 
-    public static function addPokemon() {
+    public static function addPokemon($nom, $taille, $description, $masse, $hp, $attack, $defence,$speed, $attack_spe, $defence_spe, $img_poke, $generation, $version_app, $habitat, $competence,  $categorie) {
         $db = Database::connect();
         $sql = "INSERT INTO pokemon (nom, taille, description, masse, hp, attack, defence, speed, attack_spe, defence_spe, img_poke, generation, version_app, habitat, competence, categorie)
         VALUES (:nom, :taille, :description, :masse, :hp, :attack, :defence, :speed, :attack_spe, :defence_spe, :img_poke, :generation, :version_app, :habitat, :competence, :categorie)";
         $ajouterPokemon = $db->prepare($sql);
         $ajouterPokemon->execute(array(
-            "nom" =>  $nom,
+            "nom" => $nom,
             "taille" => $taille,
             "description" => $description,
             "masse" => $masse,

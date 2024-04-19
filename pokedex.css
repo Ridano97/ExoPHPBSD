@@ -11,6 +11,10 @@
     font-family: rowdies ;
 }
 
+#backbody {
+    background-color: #2D9BD2 !important;
+}
+
 body {
     background-image: url(./images/arrière-plan.avif);
     background-position: center;
@@ -95,6 +99,18 @@ h1 {
 }
 
 
+#image_logo2 {
+    height: 250px;
+    width: 600px;
+    background-color:#EF4035;
+    margin-bottom: 80px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px #2871B8;
+}
+
+
 ul {
     list-style: none;
     display: flex;
@@ -117,6 +133,48 @@ footer {
     margin-top: 400px;
     position: absolute;
 
+}
+
+#mew {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    border-radius: 70px;
+    margin-left: 1100px;
+    margin-top: 450px;
+    
+}
+
+#roucarnage {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    border-radius: 70px;
+    margin-left: 100px;
+    margin-top:200px;
+    
+}
+
+#carapuce {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    border-radius: 70px;
+    margin-left: 100px;
+    margin-top: 1150px;
+    
+}
+
+
+
+#evoli {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    border-radius: 70px;
+    margin-left: 1100px;
+    margin-top: 1150px;
+    
 }
 
 #logo-back {
@@ -203,6 +261,19 @@ form {
     flex-direction: column;
 }
 
+#inscription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #EF4035;
+    border: #EF4035 2px solid;
+    margin: 0px 500px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 1px 1px #2871B8;
+    margin-top: 100px;
+}
+
 .formulaire {
     display: flex;
     align-items: center;
@@ -213,18 +284,38 @@ form {
 
 #button {
 
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
     background-color: #EF4035;
     color: white;
     border: 2px white solid;
+    font-size: 20px;
 
-}   
+}
+
+#button2 {
+
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color:#FFCC02;
+    color: white;
+    border: 2px white solid;
+    font-size: 20px;
+
+}
+
+
 
 #button:hover {
     cursor: pointer;
     background-color: #FE727B;
+}
+
+#button2:hover {
+    cursor: pointer;
+    background-color: #2871B8;
 }
 
 label {
@@ -237,4 +328,13 @@ label {
 
 #page-ajout {
     margin-top: 40px;
+}
+
+#pikachu {
+    position: absolute;
+    height: 250px;
+    width: 450px;
+    background-color: none;
+    margin-left: 550px;
+    margin-top: 240px;
 }
